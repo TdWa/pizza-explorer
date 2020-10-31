@@ -1,0 +1,48 @@
+#pizzaList {
+  #pizzaContainer {
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .pizzaCard {
+    background-color: rgb(255, 251, 235);
+    width: 100%;
+    margin: 10px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 800px) {
+    .pizzaCard {
+      width: 400px;
+    }
+  }
+
+  .pizzaText {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+
+    p {
+      margin: 15px;
+    }
+  }
+
+  button {
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    margin: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(255, 0, 76);
+    border: 1px solid rgb(255, 0, 75);
+  }
+
+  button:hover {
+    transform: scale(1.05);
+    background-color: pink;
+  }
+}
