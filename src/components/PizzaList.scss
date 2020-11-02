@@ -1,0 +1,78 @@
+#pizzaList {
+  #pizzaContainer {
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .pizzaCard {
+    position: relative;
+    background-color: rgb(255, 251, 235);
+    width: 100%;
+    margin: 10px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  @media screen and (min-width: 800px) {
+    .pizzaCard {
+      width: 400px;
+    }
+  }
+
+  .favorite {
+    z-index: 1;
+
+    button {
+      background-color: white;
+      height: 40px;
+      width: 40px;
+      margin: 15px 15px 40px 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      color: rgb(233, 0, 12);
+      border: 1px solid rgb(233, 0, 12);
+    }
+    button:hover {
+      transform: scale(1.05);
+      background-color: pink;
+    }
+    button:hover.fav {
+      background-color: gray;
+      color: black;
+      border: 1px solid rgb(0, 0, 0);
+    }
+  }
+  .pizzaText {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+
+    p {
+      margin: 15px;
+    }
+  }
+
+  .off {
+    background-color: rgb(88, 88, 88);
+    color: rgb(230, 230, 230);
+  }
+
+  .off:hover {
+    background-color: green;
+  }
+
+  .on {
+    background-color: rgb(98, 255, 98);
+  }
+}

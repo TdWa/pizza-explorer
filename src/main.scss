@@ -1,0 +1,16 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  min-width: 360px;
+  margin: 0;
+}
+
+#app {
+  padding: 10px;
+}
+#app.dark {
+  background-color: black;
+  color: white;
+}

@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import PizzaList from "./components/PizzaList";
+import AddPizzaForm from "./components/AddPizzaForm";
+import "./main.scss";
+import { useSelector, useDispatch } from "react-redux";
+
+const selectMode = (reduxState) => {
+  return reduxState.darkMode;
+};
 
 function App() {
+  const dispatch = useDispatch();
+  const darkMode = useSelector(selectMode);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="app" className={darkMode ? "dark" : "light"}>
+      <button onClick={() => dispatch({ type: "TOGGLE_DARK_MODE" })}>
+        Dark/Light Mode
+      </button>
+      <PizzaList />
+      <AddPizzaForm />
     </div>
   );
 }
